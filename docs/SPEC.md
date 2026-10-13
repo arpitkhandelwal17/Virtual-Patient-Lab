@@ -414,7 +414,7 @@ Total: about 66 working days.
 |---|---|---|
 | **M1-T1** | Setup check: Claude Code reads `CLAUDE.md` and this spec; checks Python, Git, uv, Node.js and PostgreSQL; installs uv if missing (after asking) | Claude Code summarises the project and rules correctly |
 | **M1-T2** | Folder structure for the whole project (engine, server, screens, tests, storage, docs) | Structure explained in plain English and approved |
-| **M1-T3** | Data formats (JSON schemas) for medicine, ingredient, parameter, population category and level, individual profile, run and group result | Formats explained with a Dolo 650 example and approved |
+| **M1-T3** | Data formats (JSON schemas) for medicine, ingredient, parameter, side effect, interaction, population category and level, individual profile, run and group result. First draft (v0.1) is approved to build on; formats may be refined in later modules | Formats explained with a Dolo 650 example and approved |
 | **M1-T4** | File storage set up as in section 5.1 (`storage/` folders, kept out of Git) | Folders exist; `.gitignore` excludes them |
 | **M1-T5** | PostgreSQL database created and connected; first database migration | Server connects to the database; a test confirms it |
 | **M1-T6** | Python server started (FastAPI) with a health check | Opening the health check address in the browser shows "OK" |
