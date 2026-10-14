@@ -1,0 +1,30 @@
+[project]
+name = "virtual-patient-lab"
+version = "0.1.0"
+description = "Research tool: how population groups respond to a medicine. Research use only - not for clinical decisions."
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy",
+    "alembic",
+    "psycopg[binary]",
+    # Local PostgreSQL that runs without a Windows installer (development only).
+    # The live server uses a normal PostgreSQL of the same major version (18).
+    "pixeltable-pgserver",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[project.scripts]
+start-db = "server.database:start_db_command"
+stop-db = "server.database:stop_db_command"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["engine", "server"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

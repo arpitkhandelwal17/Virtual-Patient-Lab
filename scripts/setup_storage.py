@@ -12,6 +12,7 @@ FOLDERS = [
     "results",      # simulation results, one subfolder per run (Parquet)
     "reports",      # generated PDF and Excel reports
     "logs",         # error and activity logs
+    "db",           # local database files (development)
 ]
 
 
